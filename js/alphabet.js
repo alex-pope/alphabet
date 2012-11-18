@@ -1,3 +1,10 @@
+window.audioContainer = document.getElementById("audioContainer");
+window.canvas = document.getElementById('canvas');
+
+window.context = canvas.getContext('2d');
+window.context.fillStyle = 'rgb(108, 108, 128)';
+window.context.font = 'bold 144px sans-serif';
+
 window.formatText = function(charCode) {
     var text = String.fromCharCode(charCode);
 
@@ -27,13 +34,6 @@ window.alphaWavs = ( function() {
 } )();
 
 document.body.onload = function() {
-    window.audioContainer = document.getElementById("audioContainer");
-    window.canvas = document.getElementById('canvas');
-
-    window.context = canvas.getContext('2d');
-    window.context.fillStyle = 'rgb(108, 108, 128)';
-    window.context.font = 'bold 144px sans-serif';
-
     window.onkeypress = onKeyPress;
     window.onkeyup = onKeyUp;
 }
